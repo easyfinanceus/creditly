@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kreditly.az - Credit calculators and personal finance tools</title>
+    <meta
+      name="description"
+      content="A fast multilingual static website for loan payments, debt burden, early repayment, and currency conversion."
+    />
+    <link rel="canonical" href="https://kreditly.az/en/" />
+    <link rel="alternate" hreflang="az" href="https://kreditly.az/" />
+    <link rel="alternate" hreflang="ru" href="https://kreditly.az/ru/" />
+    <link rel="alternate" hreflang="en" href="https://kreditly.az/en/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kreditly.az - Credit calculators and personal finance tools" />
+    <meta property="og:description" content="Loan, debt burden, early repayment, and currency conversion tools for a lightweight fintech site." />
+    <meta property="og:url" content="https://kreditly.az/en/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body data-lang="en">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="../en/">
+          <span class="brand-mark" aria-hidden="true">₼</span>
+          <span>Kreditly.az</span>
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#loan">Loan</a>
+          <a href="#debt">Debt burden</a>
+          <a href="#currency">Currency</a>
+          <a href="#early">Early repayment</a>
+          <a href="#compare">Comparison</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <div class="lang-switcher" aria-label="Language switcher">
+          <a href="../">AZ</a>
+          <a href="../ru/">RU</a>
+          <a class="is-active" href="../en/">EN</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <article class="panel hero-copy">
+            <div class="eyebrow">Calculate fast. Decide with confidence.</div>
+            <h1>Credit planning, debt checks, and repayment scenarios in one clean interface</h1>
+            <p>
+              Kreditly.az is a lightweight static site that helps visitors estimate monthly loan costs, safe borrowing
+              levels, early repayment impact, and currency conversions without clutter or heavy scripts.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#loan">Open loan calculator</a>
+              <a class="btn btn-secondary" href="#tools">Browse all tools</a>
+            </div>
+            <div class="hero-stats">
+              <div class="stat"><strong>5 useful tools</strong><span>Designed for repeat visits and practical value</span></div>
+              <div class="stat"><strong>3 languages</strong><span>Separate URLs for Azerbaijani, Russian, and English</span></div>
+              <div class="stat"><strong>SEO-ready</strong><span>Semantic markup, hreflang, robots, and sitemap</span></div>
+              <div class="stat"><strong>Ad-ready</strong><span>Reserved slots that do not break the layout</span></div>
+            </div>
+          </article>
+          <aside class="panel hero-highlight">
+            <h2>Popular presets</h2>
+            <p>Tap a common scenario and send it straight into the main calculator.</p>
+            <div class="chips">
+              <button type="button" data-popular data-amount="3000" data-months="12" data-rate="14">3000 AZN</button>
+              <button type="button" data-popular data-amount="5000" data-months="24" data-rate="15">5000 AZN</button>
+              <button type="button" data-popular data-amount="10000" data-months="36" data-rate="16">10000 AZN</button>
+              <button type="button" data-popular data-amount="15000" data-months="48" data-rate="17">15000 AZN</button>
+            </div>
+            <div class="note-card" style="margin-top: 18px;">
+              <h3>Why this works</h3>
+              <p>Visitors can move between related calculators, compare scenarios, and stay longer without needing an account or backend.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+      <section class="section"><div class="container"><div class="ad-slot"><strong>Ad slot 1</strong><small>A fixed placeholder after the hero, ready for a future ad script.</small></div></div></section>
+      <section class="section" id="tools">
+        <div class="container">
+          <div class="section-header"><div><h2>Core calculators</h2><p>Each section links naturally to the next useful money decision.</p></div></div>
+          <div class="tools-grid">
+            <article class="tool-card" id="loan">
+              <h3>Loan calculator</h3>
+              <p>Estimate monthly payment, total repayment, and interest cost.</p>
+              <form id="loan-form" novalidate>
+                <div class="form-grid">
+                  <label>Loan amount (AZN)<input name="amount" type="number" min="1" value="10000" /></label>
+                  <label>Term (months)<input name="months" type="number" min="1" value="36" /></label>
+                  <label>Annual rate (%)<input name="rate" type="number" min="0" step="0.1" value="16" /></label>
+                  <label>Payment type<select name="paymentType"><option value="annuity">Annuity</option><option value="differentiated">Differentiated</option></select></label>
+                </div>
+                <div class="error-text" data-error="loan"></div>
+                <button type="submit">Calculate</button>
+              </form>
+              <div class="result-box" id="loan-result" aria-live="polite"></div>
+              <div class="result-actions">
+                <button class="btn-secondary" id="copy-result" type="button">Copy result</button>
+                <button class="btn-secondary" id="share-result" type="button">Share result</button>
+                <span class="hint" id="share-feedback"></span>
+              </div>
+            </article>
+            <article class="tool-card" id="debt">
+              <h3>Debt burden calculator</h3>
+              <p>Estimate how much credit may be reasonable based on salary and existing obligations.</p>
+              <form id="debt-form" novalidate>
+                <div class="form-grid">
+                  <label>Monthly salary (AZN)<input name="salary" type="number" min="1" value="1400" /></label>
+                  <label>Current obligations (AZN)<input name="obligations" type="number" min="0" value="250" /></label>
+                  <label>Desired term (months)<input name="debtMonths" type="number" min="1" value="36" /></label>
+                  <label>Interest rate (%)<input name="debtRate" type="number" min="0" step="0.1" value="15" /></label>
+                </div>
+                <div class="error-text" data-error="debt"></div>
+                <button type="submit">Show estimate</button>
+              </form>
+              <div class="result-box" id="debt-result" aria-live="polite"></div>
+            </article>
+            <article class="tool-card" id="currency">
+              <h3>Currency converter</h3>
+              <p>Convert between AZN, USD, EUR, and RUB with static demo rates that keep the site fully static.</p>
+              <form id="currency-form" novalidate>
+                <div class="form-grid">
+                  <label>Amount<input name="convertAmount" type="number" min="0.01" step="0.01" value="1000" /></label>
+                  <label>From<select name="fromCurrency"><option>AZN</option><option>USD</option><option>EUR</option><option>RUB</option></select></label>
+                  <label>To<select name="toCurrency"><option>USD</option><option>AZN</option><option>EUR</option><option>RUB</option></select></label>
+                </div>
+                <div class="form-note">Static rates can be replaced later with a public API if needed.</div>
+                <div class="error-text" data-error="currency"></div>
+                <button type="submit">Convert</button>
+              </form>
+              <div class="result-box" id="currency-result" aria-live="polite"></div>
+            </article>
+            <article class="tool-card" id="early">
+              <h3>Early repayment calculator</h3>
+              <p>Check how extra monthly payments can shorten the term or reduce the next scheduled payment.</p>
+              <form id="early-form" novalidate>
+                <div class="form-grid">
+                  <label>Loan amount<input name="earlyAmount" type="number" min="1" value="12000" /></label>
+                  <label>Term (months)<input name="earlyMonths" type="number" min="1" value="36" /></label>
+                  <label>Rate (%)<input name="earlyRate" type="number" min="0" step="0.1" value="14" /></label>
+                  <label>Extra monthly payment<input name="extraPayment" type="number" min="0" value="100" /></label>
+                </div>
+                <div class="error-text" data-error="early"></div>
+                <button type="submit">Compare options</button>
+              </form>
+              <div class="result-box" id="early-result" aria-live="polite"></div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section"><div class="container"><div class="ad-slot"><strong>Ad slot 2</strong><small>A reserved block between content sections for future monetization.</small></div></div></section>
+      <section class="section" id="compare">
+        <div class="container">
+          <div class="section-header"><div><h2>Compare loan options</h2><p>Side-by-side numbers make it easier to choose the more efficient offer.</p></div></div>
+          <article class="tool-card">
+            <form id="compare-form" novalidate>
+              <div class="form-grid">
+                <label>Option 1 amount<input name="c1Amount" type="number" min="1" value="7000" /></label>
+                <label>Option 1 term<input name="c1Months" type="number" min="1" value="24" /></label>
+                <label>Option 1 rate<input name="c1Rate" type="number" min="0" step="0.1" value="14" /></label>
+                <label>Option 2 amount<input name="c2Amount" type="number" min="1" value="7000" /></label>
+                <label>Option 2 term<input name="c2Months" type="number" min="1" value="36" /></label>
+                <label>Option 2 rate<input name="c2Rate" type="number" min="0" step="0.1" value="16" /></label>
+                <label>Option 3 amount<input name="c3Amount" type="number" min="1" value="7000" /></label>
+                <label>Option 3 term<input name="c3Months" type="number" min="1" value="48" /></label>
+                <label>Option 3 rate<input name="c3Rate" type="number" min="0" step="0.1" value="18" /></label>
+              </div>
+              <div class="error-text" data-error="compare"></div>
+              <button type="submit">Update comparison</button>
+            </form>
+            <div class="compare-grid" id="compare-result" aria-live="polite"></div>
+          </article>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container sample-table">
+          <h2>Example payment table</h2>
+          <p>Approximate annuity outcomes based on a 36-month term and a 16% annual rate.</p>
+          <table>
+            <thead><tr><th>Amount</th><th>Monthly payment</th><th>Total payment</th><th>Interest paid</th></tr></thead>
+            <tbody>
+              <tr><td>3000 AZN</td><td>105.47 AZN</td><td>3796.96 AZN</td><td>796.96 AZN</td></tr>
+              <tr><td>5000 AZN</td><td>175.79 AZN</td><td>6328.27 AZN</td><td>1328.27 AZN</td></tr>
+              <tr><td>10000 AZN</td><td>351.57 AZN</td><td>12656.53 AZN</td><td>2656.53 AZN</td></tr>
+              <tr><td>15000 AZN</td><td>527.36 AZN</td><td>18984.80 AZN</td><td>3984.80 AZN</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="section" id="faq">
+        <div class="container">
+          <div class="section-header"><div><h2>Frequently asked questions</h2><p>Short answers help visitors and create stronger search-friendly page structure.</p></div></div>
+          <div class="faq-grid">
+            <article class="faq-card"><h3>What is the difference between annuity and differentiated payments?</h3><p>Annuity payments stay more stable, while differentiated schedules usually start higher and decline over time.</p></article>
+            <article class="faq-card"><h3>How much debt burden is considered safe?</h3><p>A practical starting point is keeping monthly debt payments within roughly 35-40% of income.</p></article>
+            <article class="faq-card"><h3>Does the currency converter use live rates?</h3><p>Not in the MVP. It uses static values to keep deployment simple, with room for an API upgrade later.</p></article>
+          </div>
+        </div>
+      </section>
+      <section class="section"><div class="container"><div class="ad-slot"><strong>Ad slot 3</strong><small>Suitable for a bottom banner or in-article advertising block later on.</small></div></div></section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="brand"><span class="brand-mark" aria-hidden="true">₼</span><span>Kreditly.az</span></div>
+          <p class="footer-meta">A static multilingual fintech MVP for GitHub Pages. © <span id="year"></span></p>
+        </div>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="#loan">Loan</a><a href="#debt">Debt burden</a><a href="#currency">Currency</a><a href="#early">Early repayment</a><a href="#compare">Comparison</a><a href="../en/privacy-policy/">Privacy policy</a>
+        </nav>
+        <div class="lang-switcher"><a href="../">AZ</a><a href="../ru/">RU</a><a class="is-active" href="../en/">EN</a></div>
+      </div>
+    </footer>
+    <script src="../assets/app.js" defer></script>
+  </body>
+</html>

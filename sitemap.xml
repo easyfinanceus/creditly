@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://kreditly.az/</loc>
+    <xhtml:link rel="alternate" hreflang="az" href="https://kreditly.az/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kreditly.az/ru/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://kreditly.az/en/" />
+  </url>
+  <url>
+    <loc>https://kreditly.az/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="az" href="https://kreditly.az/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kreditly.az/ru/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://kreditly.az/en/" />
+  </url>
+  <url>
+    <loc>https://kreditly.az/en/</loc>
+    <xhtml:link rel="alternate" hreflang="az" href="https://kreditly.az/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kreditly.az/ru/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://kreditly.az/en/" />
+  </url>
+  <url>
+    <loc>https://kreditly.az/privacy-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="az" href="https://kreditly.az/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kreditly.az/ru/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://kreditly.az/en/privacy-policy/" />
+  </url>
+  <url>
+    <loc>https://kreditly.az/ru/privacy-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="az" href="https://kreditly.az/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kreditly.az/ru/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://kreditly.az/en/privacy-policy/" />
+  </url>
+  <url>
+    <loc>https://kreditly.az/en/privacy-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="az" href="https://kreditly.az/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kreditly.az/ru/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://kreditly.az/en/privacy-policy/" />
+  </url>
+</urlset>

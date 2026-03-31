@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kreditly.az - Кредитный калькулятор и финансовые инструменты</title>
+    <meta
+      name="description"
+      content="Рассчитывайте платеж по кредиту, долговую нагрузку, досрочное погашение и конвертацию валют на быстром статическом сайте."
+    />
+    <link rel="canonical" href="https://kreditly.az/ru/" />
+    <link rel="alternate" hreflang="az" href="https://kreditly.az/" />
+    <link rel="alternate" hreflang="ru" href="https://kreditly.az/ru/" />
+    <link rel="alternate" hreflang="en" href="https://kreditly.az/en/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kreditly.az - Кредитный калькулятор и финансовые инструменты" />
+    <meta property="og:description" content="Кредит, долговая нагрузка, досрочное погашение и валютный конвертер." />
+    <meta property="og:url" content="https://kreditly.az/ru/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body data-lang="ru">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="../ru/">
+          <span class="brand-mark" aria-hidden="true">₼</span>
+          <span>Kreditly.az</span>
+        </a>
+        <nav class="nav-links" aria-label="Основная навигация">
+          <a href="#loan">Кредит</a>
+          <a href="#debt">Нагрузка</a>
+          <a href="#currency">Валюта</a>
+          <a href="#early">Досрочно</a>
+          <a href="#compare">Сравнение</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <div class="lang-switcher" aria-label="Выбор языка">
+          <a href="../">AZ</a>
+          <a class="is-active" href="../ru/">RU</a>
+          <a href="../en/">EN</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <article class="panel hero-copy">
+            <div class="eyebrow">Считать быстро. Решать спокойно.</div>
+            <h1>Кредитные и финансовые расчеты в одном аккуратном интерфейсе</h1>
+            <p>
+              Kreditly.az помогает быстро понять ежемесячный платеж, общую переплату, безопасную сумму кредита и
+              эффект досрочного погашения. Сайт остается легким, статическим и готовым к GitHub Pages.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#loan">Открыть калькулятор кредита</a>
+              <a class="btn btn-secondary" href="#tools">Все инструменты</a>
+            </div>
+            <div class="hero-stats">
+              <div class="stat"><strong>5 инструментов</strong><span>Для полезных повторных заходов и удержания</span></div>
+              <div class="stat"><strong>3 языка</strong><span>Отдельные URL для AZ, RU и EN</span></div>
+              <div class="stat"><strong>SEO-ready</strong><span>Разметка, sitemap, robots и hreflang</span></div>
+              <div class="stat"><strong>Ad-ready</strong><span>Спокойные рекламные слоты без сдвигов layout</span></div>
+            </div>
+          </article>
+          <aside class="panel hero-highlight">
+            <h2>Популярные расчеты</h2>
+            <p>Быстрые пресеты для проверки типовых сценариев.</p>
+            <div class="chips">
+              <button type="button" data-popular data-amount="3000" data-months="12" data-rate="14">3000 AZN</button>
+              <button type="button" data-popular data-amount="5000" data-months="24" data-rate="15">5000 AZN</button>
+              <button type="button" data-popular data-amount="10000" data-months="36" data-rate="16">10000 AZN</button>
+              <button type="button" data-popular data-amount="15000" data-months="48" data-rate="17">15000 AZN</button>
+            </div>
+            <div class="note-card" style="margin-top: 18px;">
+              <h3>Почему это полезно</h3>
+              <p>Один пользователь может проверить несколько сценариев подряд: другой срок, другая ставка, другая зарплата или валюта.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+      <section class="section"><div class="container"><div class="ad-slot"><strong>Рекламная зона 1</strong><small>Фиксированный блок после hero для будущей монетизации.</small></div></div></section>
+      <section class="section" id="tools">
+        <div class="container">
+          <div class="section-header"><div><h2>Основные калькуляторы</h2><p>Все блоки связаны между собой для удобной внутренней навигации.</p></div></div>
+          <div class="tools-grid">
+            <article class="tool-card" id="loan">
+              <h3>Кредитный калькулятор</h3>
+              <p>Показывает ежемесячный платеж, общую выплату и переплату.</p>
+              <form id="loan-form" novalidate>
+                <div class="form-grid">
+                  <label>Сумма (AZN)<input name="amount" type="number" min="1" value="10000" /></label>
+                  <label>Срок (мес.)<input name="months" type="number" min="1" value="36" /></label>
+                  <label>Годовая ставка (%)<input name="rate" type="number" min="0" step="0.1" value="16" /></label>
+                  <label>Тип платежа<select name="paymentType"><option value="annuity">Аннуитет</option><option value="differentiated">Дифференцированный</option></select></label>
+                </div>
+                <div class="error-text" data-error="loan"></div>
+                <button type="submit">Рассчитать</button>
+              </form>
+              <div class="result-box" id="loan-result" aria-live="polite"></div>
+              <div class="result-actions">
+                <button class="btn-secondary" id="copy-result" type="button">Copy result</button>
+                <button class="btn-secondary" id="share-result" type="button">Share result</button>
+                <span class="hint" id="share-feedback"></span>
+              </div>
+            </article>
+            <article class="tool-card" id="debt">
+              <h3>Калькулятор зарплаты и долговой нагрузки</h3>
+              <p>Показывает примерную безопасную сумму кредита с учетом дохода и текущих обязательств.</p>
+              <form id="debt-form" novalidate>
+                <div class="form-grid">
+                  <label>Зарплата (AZN)<input name="salary" type="number" min="1" value="1400" /></label>
+                  <label>Текущие обязательства (AZN)<input name="obligations" type="number" min="0" value="250" /></label>
+                  <label>Срок кредита (мес.)<input name="debtMonths" type="number" min="1" value="36" /></label>
+                  <label>Ставка (%)<input name="debtRate" type="number" min="0" step="0.1" value="15" /></label>
+                </div>
+                <div class="error-text" data-error="debt"></div>
+                <button type="submit">Показать ориентир</button>
+              </form>
+              <div class="result-box" id="debt-result" aria-live="polite"></div>
+            </article>
+            <article class="tool-card" id="currency">
+              <h3>Конвертер валют</h3>
+              <p>Быстро переводит AZN, USD, EUR и RUB. В MVP используются статические курсы.</p>
+              <form id="currency-form" novalidate>
+                <div class="form-grid">
+                  <label>Сумма<input name="convertAmount" type="number" min="0.01" step="0.01" value="1000" /></label>
+                  <label>Из валюты<select name="fromCurrency"><option>AZN</option><option>USD</option><option>EUR</option><option>RUB</option></select></label>
+                  <label>В валюту<select name="toCurrency"><option>USD</option><option>AZN</option><option>EUR</option><option>RUB</option></select></label>
+                </div>
+                <div class="form-note">Позже можно заменить на публичный API без перехода на backend.</div>
+                <div class="error-text" data-error="currency"></div>
+                <button type="submit">Конвертировать</button>
+              </form>
+              <div class="result-box" id="currency-result" aria-live="polite"></div>
+            </article>
+            <article class="tool-card" id="early">
+              <h3>Калькулятор досрочного погашения</h3>
+              <p>Показывает сценарий сокращения срока и сценарий снижения ежемесячной нагрузки.</p>
+              <form id="early-form" novalidate>
+                <div class="form-grid">
+                  <label>Сумма кредита<input name="earlyAmount" type="number" min="1" value="12000" /></label>
+                  <label>Срок (мес.)<input name="earlyMonths" type="number" min="1" value="36" /></label>
+                  <label>Ставка (%)<input name="earlyRate" type="number" min="0" step="0.1" value="14" /></label>
+                  <label>Доп. платеж в месяц<input name="extraPayment" type="number" min="0" value="100" /></label>
+                </div>
+                <div class="error-text" data-error="early"></div>
+                <button type="submit">Сравнить сценарии</button>
+              </form>
+              <div class="result-box" id="early-result" aria-live="polite"></div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section"><div class="container"><div class="ad-slot"><strong>Рекламная зона 2</strong><small>Нативный контейнер между полезными блоками.</small></div></div></section>
+      <section class="section" id="compare">
+        <div class="container">
+          <div class="section-header"><div><h2>Сравнение кредитов</h2><p>Сразу видно, какой вариант дешевле по платежу и общей переплате.</p></div></div>
+          <article class="tool-card">
+            <form id="compare-form" novalidate>
+              <div class="form-grid">
+                <label>Вариант 1 сумма<input name="c1Amount" type="number" min="1" value="7000" /></label>
+                <label>Вариант 1 срок<input name="c1Months" type="number" min="1" value="24" /></label>
+                <label>Вариант 1 ставка<input name="c1Rate" type="number" min="0" step="0.1" value="14" /></label>
+                <label>Вариант 2 сумма<input name="c2Amount" type="number" min="1" value="7000" /></label>
+                <label>Вариант 2 срок<input name="c2Months" type="number" min="1" value="36" /></label>
+                <label>Вариант 2 ставка<input name="c2Rate" type="number" min="0" step="0.1" value="16" /></label>
+                <label>Вариант 3 сумма<input name="c3Amount" type="number" min="1" value="7000" /></label>
+                <label>Вариант 3 срок<input name="c3Months" type="number" min="1" value="48" /></label>
+                <label>Вариант 3 ставка<input name="c3Rate" type="number" min="0" step="0.1" value="18" /></label>
+              </div>
+              <div class="error-text" data-error="compare"></div>
+              <button type="submit">Обновить сравнение</button>
+            </form>
+            <div class="compare-grid" id="compare-result" aria-live="polite"></div>
+          </article>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container sample-table">
+          <h2>Примеры расчетов</h2>
+          <p>Примерная аннуитетная модель на 36 месяцев и 16% годовых.</p>
+          <table>
+            <thead><tr><th>Сумма</th><th>Платеж</th><th>Общая выплата</th><th>Переплата</th></tr></thead>
+            <tbody>
+              <tr><td>3000 AZN</td><td>105.47 AZN</td><td>3796.96 AZN</td><td>796.96 AZN</td></tr>
+              <tr><td>5000 AZN</td><td>175.79 AZN</td><td>6328.27 AZN</td><td>1328.27 AZN</td></tr>
+              <tr><td>10000 AZN</td><td>351.57 AZN</td><td>12656.53 AZN</td><td>2656.53 AZN</td></tr>
+              <tr><td>15000 AZN</td><td>527.36 AZN</td><td>18984.80 AZN</td><td>3984.80 AZN</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="section" id="faq">
+        <div class="container">
+          <div class="section-header"><div><h2>Частые вопросы</h2><p>Короткие ответы помогают пользователю и усиливают SEO-структуру страницы.</p></div></div>
+          <div class="faq-grid">
+            <article class="faq-card"><h3>Аннуитет или дифференцированный платеж?</h3><p>Аннуитет проще для планирования, а дифференцированный обычно уменьшает переплату, но стартует с более высокой нагрузки.</p></article>
+            <article class="faq-card"><h3>Какой уровень нагрузки считается безопасным?</h3><p>Ориентир 35-40% от ежемесячного дохода остается одним из самых практичных базовых подходов.</p></article>
+            <article class="faq-card"><h3>Будут ли реальные курсы валют?</h3><p>В первой версии используются статические значения, а следующая итерация может подключать API без полноценного backend.</p></article>
+          </div>
+        </div>
+      </section>
+      <section class="section"><div class="container"><div class="ad-slot"><strong>Рекламная зона 3</strong><small>Подходит для нижнего баннера или блока в статье.</small></div></div></section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="brand"><span class="brand-mark" aria-hidden="true">₼</span><span>Kreditly.az</span></div>
+          <p class="footer-meta">Статический финансовый сайт для GitHub Pages. © <span id="year"></span></p>
+        </div>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="#loan">Кредит</a><a href="#debt">Нагрузка</a><a href="#currency">Валюта</a><a href="#early">Досрочно</a><a href="#compare">Сравнение</a><a href="../ru/privacy-policy/">Privacy policy</a>
+        </nav>
+        <div class="lang-switcher"><a href="../">AZ</a><a class="is-active" href="../ru/">RU</a><a href="../en/">EN</a></div>
+      </div>
+    </footer>
+    <script src="../assets/app.js" defer></script>
+  </body>
+</html>
