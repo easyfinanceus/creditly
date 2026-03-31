@@ -2,6 +2,8 @@
 
 Static multilingual credit and personal finance website prepared for GitHub Pages.
 
+Current live URL: `https://easyfinanceus.github.io/creditly/`
+
 ## Structure
 
 ```text
@@ -60,9 +62,8 @@ Then open `http://localhost:8000`.
 
 ## Before connecting a real domain
 
-- Replace `https://kreditly.az/` in `index.html`, `ru/index.html`, `en/index.html`, `robots.txt`, and `sitemap.xml` with your final domain if it changes.
-- Replace the same domain in `privacy-policy/index.html`, `ru/privacy-policy/index.html`, and `en/privacy-policy/index.html`.
-- Add your future Open Graph preview image at `assets/og-cover.png` or update the metadata path.
+- Replace `https://easyfinanceus.github.io/creditly/` in the HTML files, `robots.txt`, and `sitemap.xml` when you switch to a custom domain.
+- Add a real Open Graph preview image and update the metadata path if you want richer link previews.
 - Privacy policy pages are already included, but you may want to expand them once real analytics or ad scripts are added.
 
 ## Next iteration ideas

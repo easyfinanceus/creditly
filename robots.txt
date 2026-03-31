@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kreditly.az/sitemap.xml
+Sitemap: https://easyfinanceus.github.io/creditly/sitemap.xml
